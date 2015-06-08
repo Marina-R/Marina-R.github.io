@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Room</title>
+	<meta charset='utf8'>
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="jspkg-archive/stylesheets/jquery.cssemoticons.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<section id="welcome">
+		<div id="logo"></div>
+		<div id="login">
+			<form id="user-login">
+				<div class="label">
+					<label>Choose Your Username <br>
+						<input type="text" id="login-username">
+					</label>
+				</div>
+				<div class="label">
+					<label><a href='#welcome'>Choose The Room</a><br>
+						<select id="select">
+							<option value="Global" selected>Global</option>
+							<option value="Private">Private</option>
+							<option value="No-unicorns-allowed">No unicorns allowed</option>
+							<option value="Extreme-programming">Extreme programming</option>
+							<option value="Waterfalls-are-pretty">Waterfalls are pretty</option>
+						</select>
+					</label>
+				</div>	
+				<div id="button">
+					<button type="submit" id="enter-button">Enter chat</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	<section id='chat' class='Global Private No-unicorns-allowed Extreme-programming Waterfalls-are-pretty'>
+		<div id="sidebar">
+			<div class='nav-sidebar'>
+				<div class='header'><a href='#chat'>Rooms</a></div>
+				<div class="list" id="rooms">
+					<a href='#Global' id="go-global">Global</a><br>
+					<a href='#Private' id="go-private">Private</a><br>
+					<a href='#No-unicorns-allowed' id="go-unicorns">No-unicorns-allowed</a><br>
+					<a href='#Extreme-programming' id="go-extreme">Extreme-programming</a><br>
+					<a href='#Waterfalls-are-pretty' id="go-waterfalls">Waterfalls-are-pretty</a>
+				</div>
+			</div>
+			<div class='nav-sidebar' id="top-users">
+				<div class='header'>
+					<a href='#top-10'>Top-10 users on chat</a>
+				</div>
+				<div class="list" id="leaders">
+					<table>
+						<thead>
+							<th>Username</th>
+							<th># of msg</th>
+						</thead>
+						<tbody id="table1"></tbody>
+					</table>
+				</div>
+			</div>
+			<div class='nav-sidebar' id="active-rooms">
+				<div class='header'>
+					<a href='#active'>Most active rooms</a>
+				</div>
+				<div class="list" id="active">
+					<table>
+						<thead>
+							<th>Room</th>
+							<th># of msg</th>
+						</thead>
+						<tbody id="table2"></tbody>
+					</table>
+				</div>
+			</div>
+			<div class='nav-sidebar' id="recent-users">
+				<div class='header'>
+					<a href='#recent'>Recent users</a>
+				</div>
+				<div class="list" id='users'></div>
+			</div>
+		</div>
+		<div id="main">
+			<div class="header" id="header">
+				<div id="room-name"></div>
+				<div id="settings"></div>
+			</div>
+			<div id='msg-output'></div>
+			<div id="msg-input">
+				<form id="enter-msg">
+					<div id="smiles"></div>
+					<textarea placeholder='Type your message here...'></textarea>
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section id='set'>
+		<div class="header" id='block1'>Settings</div>
+		<div id="block2">
+			<label>Change Username<br>
+				<input type="text" id="changeName">
+				<button type="submit" id="changeNameBtn">Apply</button>
+			</label>
+		</div>
+		<div id="block3">
+			<label>Show messages for the last<br>
+				<select id="timeRange">
+					<option value='2'>2 minutes</option>
+					<option value="5" selected>5 minutes</option>
+					<option value="10">10 minutes</option>
+					<option value="20">20 minutes</option>
+					<option value="30">30 minutes</option>
+				</select>
+				<button type="submit" id="changeHistory">Apply</button>
+			</label>
+		</div>
+		<div id="block4">
+			
+		</div>
+	</section>
+
+	<script type="text/template" id='messages'>
+		<div id='msg-row' data-id='<%= id %>'>
+			<div class='user'><%= username %></div>
+			<div class='msg'><%= msg %></div>
+			<div class='time'><%= created_at %></div>
+		</div>
+	</script>
+
+	<script type="text/javascript" src='bower_components/jquery/dist/jquery.min.js'></script>
+	<script type="text/javascript" src='bower_components/underscore/underscore-min.js'></script>
+	<script type="text/javascript" src='bower_components/backbone/backbone-min.js'></script>
+	<script type="text/javascript" src='bower_components/moment/min/moment.min.js'></script>
+	<script type="text/javascript" src='jspkg-archive/javascripts/jquery.cssemoticons.min.js'></script>
+	<script type="text/javascript" src='scripts/main.js'></script>
+</body>
+</html>
