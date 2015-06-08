@@ -51,6 +51,16 @@ $(document).ready(function() {
 			setTimeout(getMsg, 500);
 			$('textarea').val('');
 		}
+		$.get(url + 'leaderboard', 
+			function(data) {
+				var users = [];
+				for(var i = 0; i<data.length; i++) {
+					users.push('<tr><td>' + data[i][0] + '</td><td>' + data[i][1] + '</td></tr>');
+				}
+				$('#table1').html(users.join(''));
+			},
+		'json'
+		);
 	});
 
 	$('#enter-msg').submit(function(e) {
