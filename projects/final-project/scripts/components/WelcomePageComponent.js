@@ -10,7 +10,7 @@ module.exports = React.createClass({
 	render: function() {
 		var welcomeStyle = {
 			position: 'absolute',
-			backgroundImage: 'url(../../images/pic1.jpg)',
+			backgroundImage: 'url(./images/pic1.jpg)',
 			backgroundRepeat: 'no-repeat',
 			backgroundSize: 'cover',
 			width: '100%',
@@ -24,7 +24,7 @@ module.exports = React.createClass({
 			fontSize: '45px'
 		};
 		var logo ={
-			backgroundImage: 'url(../../images/logo.png)',
+			backgroundImage: 'url(./images/logo.png)',
 			backgroundRepeat: 'no-repeat',
 			backgroundSize: 'cover',
 			width: '200px',
@@ -42,7 +42,7 @@ module.exports = React.createClass({
 		var line = {
 			position: 'fixed',
 			top: 0,
-			backgroundImage: 'url(../../images/bg-header2.png)',
+			backgroundImage: 'url(./images/bg-header2.png)',
 			height: '4px',
 			width: '100%'
 		};

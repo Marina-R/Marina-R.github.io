@@ -2,7 +2,7 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background: url(../../images/halftone.png);
+    background: url(../images/halftone.png);
 }
 
 #wrapper {
