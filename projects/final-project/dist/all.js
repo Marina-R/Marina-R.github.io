@@ -60173,12 +60173,12 @@ module.exports = React.createClass({
 		};
 		var line = {
 			top: 0,
-			backgroundImage: 'url(../../images/bg-header2.png)',
+			backgroundImage: 'url(./images/bg-header2.png)',
 			height: '3px',
 			width: '100%'
 		};
 		var logo = {
-			background: 'url(../../images/logo.png)',
+			background: 'url(./images/logo.png)',
 			backgroundSize: 'cover',
 			marginTop: '20px',
 			marginLeft: '5px',
@@ -60430,7 +60430,7 @@ module.exports = React.createClass({
 		var line = {
 			position: 'fixed',
 			top: 0,
-			backgroundImage: 'url(../../images/bg-header2.png)',
+			backgroundImage: 'url(./images/bg-header2.png)',
 			height: '4px',
 			width: '100%'
 		};
