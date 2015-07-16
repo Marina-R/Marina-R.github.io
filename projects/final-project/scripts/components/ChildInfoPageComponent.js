@@ -17,7 +17,7 @@ module.exports = React.createClass({
 		var line = {
 			position: 'fixed',
 			top: 0,
-			backgroundImage: 'url(../../images/bg-header2.png)',
+			backgroundImage: 'url(./images/bg-header2.png)',
 			height: '4px',
 			width: '100%'
 		};
