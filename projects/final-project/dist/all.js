@@ -60823,14 +60823,14 @@ module.exports = React.createClass({
 			fontSize: '45px'
 		};
 		var logo = {
-			backgroundImage: 'url(../../images/logo.png)',
+			backgroundImage: 'url(./images/logo.png)',
 			backgroundSize: 'cover',
 			width: '220px',
 			height: '220px'
 		};
 		var loginPageStyle = {
 			position: 'absolute',
-			backgroundImage: 'url(../../images/halftone.png)',
+			backgroundImage: 'url(./images/halftone.png)',
 			backgroundRepeat: 'no-repeat',
 			backgroundSize: 'cover',
 			width: '100%',
@@ -60839,7 +60839,7 @@ module.exports = React.createClass({
 		var line = {
 			position: 'fixed',
 			top: 0,
-			backgroundImage: 'url(../../images/bg-header2.png)',
+			backgroundImage: 'url(./images/bg-header2.png)',
 			height: '4px',
 			width: '100%'
 		};
